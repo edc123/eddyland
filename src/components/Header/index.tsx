@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
+import './Header.scss'
+
 type HeaderProps = {
   siteTitle: string
 }
@@ -9,10 +11,7 @@ const Header: React.FC<HeaderProps> = ({
   siteTitle = '',
 }) => (
   <div
-    style={{
-      background: 'black',
-      marginBottom: '1.45rem',
-    }}
+    className="header__container"
   >
     <div
       style={{
@@ -21,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 className="header__text">
         <Link
           to="/"
           style={{
@@ -36,4 +35,4 @@ const Header: React.FC<HeaderProps> = ({
   </div>
 )
 
-export default Header
+export { Header }
